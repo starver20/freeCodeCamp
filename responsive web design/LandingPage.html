@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #header {
+      background-color: rgb(255, 255, 255);
+      width: 100%;
+      height: 70px;
+      position: fixed;
+      top: 0px;
+      display: flex;
+      padding-top: 10px;
+      padding-bottom: 0px;
+      box-shadow: 0px 1px 2px 2px rgb(226, 211, 211);
+    }
+    #header-img {
+      margin-left: 10px;
+    }
+    #nav-bar {
+      margin-left: auto;
+      padding-top: 20px;
+      padding-bottom: 30px;
+    }
+
+    .nav-link {
+      margin-left: 20px;
+      margin-top: 50px;
+      margin-right: 30px;
+      color: black;
+      text-decoration: none;
+    }
+    #intro {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: black;
+      margin-top: 72px;
+      width: 100%;
+      height: 800px;
+      color: white;
+    }
+    #img {
+      height: 600px;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      margin-left: 80px;
+    }
+    #tagline {
+      font-family: sans-serif;
+      font-size: 40px;
+      font-weight: bold;
+      text-align: center;
+    }
+    #watch {
+      width: 20%;
+    }
+    #vid {
+      background-color: black;
+      color: white;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      font-family: sans-serif;
+      font-size: 40px;
+      font-weight: bold;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 40px;
+      height: 500px;
+    }
+    form {
+      width: 100%;
+      font-family: sans-serif;
+      font-size: 30px;
+      font-weight: bold;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    #email {
+      margin-top: -25px;
+      width: 30%;
+      height: 20px;
+      border-style: double;
+      border-radius: 20px;
+    }
+
+    #submit {
+      margin-top: 10px;
+      background-color: white;
+      padding: 5px 10px;
+      border-radius: 15px;
+      border-color: rgb(68, 68, 228);
+      color: blue;
+    }
+    #features {
+      display: flex;
+      justify-content: space-around;
+      width: 70%;
+      height: 200px;
+      margin-bottom: 20px;
+    }
+    #svg {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      height: 60px;
+      width: 40px;
+    }
+    h5 {
+      font-family: sans-serif;
+      font-size: larger;
+    }
+    h6 {
+      font-size: 15px;
+      font-family: sans-serif;
+    }
+    #best {
+      font-family: sans-serif;
+      font-size: 40px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    #pricing {
+      width: 70%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    @media (max-width: 720px) {
+      #card-img {
+        width: 100px;
+      }
+      #video {
+        width: 300px;
+      }
+      #img {
+        height: 300px;
+      }
+    }
+    li {
+      list-style-type: none;
+      font-variant: small-caps;
+    }
+
+    #footer {
+      background-color: black;
+      align-self: baseline;
+      color: white;
+    }
+  </style>
+  <body>
+    <header id="header">
+      <img
+        id="header-img"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/647px-Apple_logo_black.svg.png"
+        alt="original trombones logo"
+      />
+      <nav id="nav-bar">
+        <a class="nav-link" href="#header">Home</a>
+        <a class="nav-link" href="#features">Features</a>
+        <a class="nav-link" href="#pricing">Pricing</a>
+      </nav>
+    </header>
+
+    <div id="intro">
+      <img
+        id="img"
+        src="https://www.apple.com/v/watch/home/ai/images/overview/series-6/tile_watch_s6__bbw92knen8mq_large.jpg"
+        alt=""
+      />
+      <div id="tagline">
+        <img
+          src="https://www.apple.com/v/watch/home/ai/images/overview/series-6/logo_watch_s6__d70ay2jmy0uq_medium.png"
+          alt=""
+        />
+        <br />
+        <br />
+        <span>The future of health</span>
+        <br />
+        <span>is on your wrist,</span>
+        <br />
+        <span>right now.</span>
+      </div>
+    </div>
+
+    <div id="vid">
+      <div>
+        <span id="vid-intro">The all new </span>
+        <br />
+        <span>Apple watch 6</span>
+      </div>
+      <iframe
+        id="video"
+        width="600"
+        height="330"
+        src="https://www.youtube.com/embed/TCMnrssX1NE"
+        title="YouTube video player"
+        frameborder="0"
+      ></iframe>
+    </div>
+    <br />
+    <form id="form" action="#https://www.freecodecamp.com/email-submit">
+      <span
+        >Stay updated with our products, subscribe to our newsletter now.</span
+      >
+      <br />
+      <br />
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Enter your e-mail"
+      />
+      <input type="submit" name="submit" id="submit" />
+    </form>
+
+    <section id="features">
+      <div id="svg">
+        <h6>
+          <img
+            src="https://www.apple.com/v/watch/home/ai/built/assets/ac-buystrip/shipping/icon_large.svg"
+            alt=""
+          />Free delivery
+        </h6>
+      </div>
+      <div id="svg">
+        <h6>
+          <img
+            src="https://www.apple.com/in/global/includes/buystrip/images/financing/icon_large.svg"
+            alt=""
+          />Ways to Buy
+        </h6>
+      </div>
+      <div id="svg">
+        <h6>
+          <img
+            src="https://www.apple.com/v/watch/home/ai/built/assets/ac-buystrip/personal_setup/icon_large.svg"
+            alt=""
+          />Online Personal Session
+        </h6>
+      </div>
+    </section>
+
+    <h2 id="best">Which Apple the best for you?</h2>
+    <div id="pricing">
+      <div id="card">
+        <img
+          id="card-img"
+          src="https://www.apple.com//v/watch/shared/compare/d/images/overview/compare_s6__evsi0wlzp4ya_large.jpg"
+          alt=""
+        />
+        <div id="details">
+          <h5>Apple Watch Series 6</h5>
+          <h6>From ₹40900*</h6>
+
+          <li>44mm or 40mm case size</li>
+          <li>Always-On Retina display</li>
+          <li>---</li>
+          <li>GPS + Cellular1</li>
+          <li>Blood Oxygen app</li>
+          <li>ECG app</li>
+          <li>High and low heart rate notifications</li>
+          <li>Irregular heart rhythm notification</li>
+          <li>Water resistant to 50 metres</li>
+        </div>
+      </div>
+      <div id="card">
+        <img
+          id="card-img"
+          src="https://www.apple.com/v/watch/shared/compare/d/images/overview/compare_se__crebhd9hhdea_large.jpg"
+          alt=""
+        />
+        <div id="details">
+          <h5>Apple Watch SE</h5>
+          <h6>From ₹29900*</h6>
+
+          <li>44mm or 40mm case size</li>
+          <li>---</li>
+          <li>Retina display</li>
+          <li>GPS + Cellular1</li>
+          <li>---</li>
+          <li>---</li>
+          <li>High and low heart rate notifications</li>
+          <li>Irregular heart rhythm notification</li>
+          <li>Water resistant to 50 metres</li>
+        </div>
+      </div>
+      <div id="card">
+        <img
+          id="card-img"
+          src="https://www.apple.com/v/watch/shared/compare/d/images/overview/compare_s3__clzj8ukygo5e_large.jpg"
+          alt=""
+        />
+        <div id="details">
+          <h5>Apple Watch Series 3</h5>
+          <h6>From ₹20900*</h6>
+
+          <li>44mm or 4038mm case size</li>
+          <li>---</li>
+          <li>Retina display</li>
+          <li>---</li>
+          <li>---</li>
+          <li>---</li>
+          <li>High and low heart rate notifications</li>
+          <li>Irregular heart rhythm notification</li>
+          <li>Water resistant to 50 metres</li>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
