@@ -11,28 +11,34 @@
   </head>
   <style>
     main {
-      width: 80%;
-      margin-left: 20%;
       display: grid;
+      grid-template-columns: 250px 1fr;
     }
-
     #content {
-    }
-    code {
-      background-color: seashell;
+      padding-left: 20px;
     }
     #navbar {
+      grid-area: 1/1/8/2;
+      background-color: blanchedalmond;
+    }
+    .nav-link {
+      text-decoration: none;
+      color: black;
+    }
+    #navbar ul {
       position: fixed;
-      margin-left: -20%;
-      width: 20%;
-      height: 100%;
+      list-style: none;
+      padding-left: 0px;
+    }
+    #navbar li {
+      padding-left: 20px;
     }
   </style>
   <body>
     <main id="main-doc">
       <div id="content">
-        <section class="main-section" id="insert_header_name">
-          <header>Introduction</header>
+        <section class="main-section" id="introduction">
+          <header><h2>Introduction</h2></header>
           <p>
             JavaScript is a cross-platform, object-oriented scripting language.
             It is a small and lightweight language. Inside a host environment
@@ -65,8 +71,9 @@
             </li>
           </ul>
         </section>
-        <section class="main-section" id="insert_header_name">
-          <header>What you should already know</header>
+
+        <section class="main-section" id="What_you_should_already_know">
+          <header><h2>What you should already know</h2></header>
           <p>This guide assumes you have the following basic background:</p>
           <ul>
             <li>
@@ -80,8 +87,9 @@
             </li>
           </ul>
         </section>
+
         <section class="main-section" id="insert_header_name">
-          <header>JavaScript and Java</header>
+          <header><h2>JavaScript and Java</h2></header>
           <p>
             JavaScript and Java are similar in some ways but fundamentally
             different in some others. The JavaScript language resembles Java but
@@ -109,8 +117,9 @@
             parameters, and function return types are not explicitly typed.
           </p>
         </section>
+
         <section class="main-section" id="insert_header_name">
-          <header>Hello world</header>
+          <header><h2>Hello world</h2></header>
           <p>
             To get started with writing JavaScript, open the Scratchpad and
             write your first "Hello world" JavaScript code:
@@ -124,8 +133,9 @@
             browser!
           </p>
         </section>
+
         <section class="main-section" id="insert_header_name">
-          <header>Variables</header>
+          <header><h2>Variables</h2></header>
           <p>
             You use variables as symbolic names for values in your application.
             The names of variables, called identifiers, conform to certain
@@ -145,269 +155,105 @@
             Number_hits, temp99, and _name.
           </p>
         </section>
-      </div>
+
         <section class="main-section" id="insert_header_name">
-          <header>Variables</header>
+          <header><h2>Declaring variables</h2></header>
+          <p>You can declare a variable in three ways:</p>
+          <p>With the keyword var. For example,</p>
+          <code>var x = 42.</code>
           <p>
-            You use variables as symbolic names for values in your application.
-            The names of variables, called identifiers, conform to certain
-            rules.
+            This syntax can be used to declare both local and global variables.
           </p>
+          <p>By simply assigning it a value. For example,</p>
+          <code>x = 42.</code>
           <p>
-            A JavaScript identifier must start with a letter, underscore (_), or
-            dollar sign ($); subsequent characters can also be digits (0-9).
-            Because JavaScript is case sensitive, letters include the characters
-            "A" through "Z" (uppercase) and the characters "a" through "z"
-            (lowercase).
+            This always declares a global variable. It generates a strict
+            JavaScript warning. You shouldn't use this variant.
           </p>
+          <p>With the keyword let. For example,</p>
+          <code>let y = 13.</code>
           <p>
-            You can use ISO 8859-1 or Unicode letters such as å and ü in
-            identifiers. You can also use the Unicode escape sequences as
-            characters in identifiers. Some examples of legal names are
-            Number_hits, temp99, and _name.
+            This syntax can be used to declare a block scope local variable. See
+            Variable scope below.
           </p>
         </section>
-      </div>
+
         <section class="main-section" id="insert_header_name">
-          <header>Variables</header>
-          <p>
-            You use variables as symbolic names for values in your application.
-            The names of variables, called identifiers, conform to certain
-            rules.
-          </p>
-          <p>
-            A JavaScript identifier must start with a letter, underscore (_), or
-            dollar sign ($); subsequent characters can also be digits (0-9).
-            Because JavaScript is case sensitive, letters include the characters
-            "A" through "Z" (uppercase) and the characters "a" through "z"
-            (lowercase).
-          </p>
-          <p>
-            You can use ISO 8859-1 or Unicode letters such as å and ü in
-            identifiers. You can also use the Unicode escape sequences as
-            characters in identifiers. Some examples of legal names are
-            Number_hits, temp99, and _name.
-          </p>
-        </section>
-      </div>
-        <section class="main-section" id="insert_header_name">
-          <header>Variables</header>
-          <p>
-            You use variables as symbolic names for values in your application.
-            The names of variables, called identifiers, conform to certain
-            rules.
-          </p>
-          <p>
-            A JavaScript identifier must start with a letter, underscore (_), or
-            dollar sign ($); subsequent characters can also be digits (0-9).
-            Because JavaScript is case sensitive, letters include the characters
-            "A" through "Z" (uppercase) and the characters "a" through "z"
-            (lowercase).
-          </p>
-          <p>
-            You can use ISO 8859-1 or Unicode letters such as å and ü in
-            identifiers. You can also use the Unicode escape sequences as
-            characters in identifiers. Some examples of legal names are
-            Number_hits, temp99, and _name.
-          </p>
-        </section>
-      </div>
-        <section class="main-section" id="insert_header_name">
-          <header>Variables</header>
-          <p>
-            You use variables as symbolic names for values in your application.
-            The names of variables, called identifiers, conform to certain
-            rules.
-          </p>
-          <p>
-            A JavaScript identifier must start with a letter, underscore (_), or
-            dollar sign ($); subsequent characters can also be digits (0-9).
-            Because JavaScript is case sensitive, letters include the characters
-            "A" through "Z" (uppercase) and the characters "a" through "z"
-            (lowercase).
-          </p>
-          <p>
-            You can use ISO 8859-1 or Unicode letters such as å and ü in
-            identifiers. You can also use the Unicode escape sequences as
-            characters in identifiers. Some examples of legal names are
-            Number_hits, temp99, and _name.
-          </p>
-        </section>
-      </div>
-        <section class="main-section" id="insert_header_name">
-          <header>Variables</header>
-          <p>
-            You use variables as symbolic names for values in your application.
-            The names of variables, called identifiers, conform to certain
-            rules.
-          </p>
-          <p>
-            A JavaScript identifier must start with a letter, underscore (_), or
-            dollar sign ($); subsequent characters can also be digits (0-9).
-            Because JavaScript is case sensitive, letters include the characters
-            "A" through "Z" (uppercase) and the characters "a" through "z"
-            (lowercase).
-          </p>
-          <p>
-            You can use ISO 8859-1 or Unicode letters such as å and ü in
-            identifiers. You can also use the Unicode escape sequences as
-            characters in identifiers. Some examples of legal names are
-            Number_hits, temp99, and _name.
-          </p>
-        </section>
-      </div>
-        <section class="main-section" id="insert_header_name">
-          <header>Variables</header>
-          <p>
-            You use variables as symbolic names for values in your application.
-            The names of variables, called identifiers, conform to certain
-            rules.
-          </p>
-          <p>
-            A JavaScript identifier must start with a letter, underscore (_), or
-            dollar sign ($); subsequent characters can also be digits (0-9).
-            Because JavaScript is case sensitive, letters include the characters
-            "A" through "Z" (uppercase) and the characters "a" through "z"
-            (lowercase).
-          </p>
-          <p>
-            You can use ISO 8859-1 or Unicode letters such as å and ü in
-            identifiers. You can also use the Unicode escape sequences as
-            characters in identifiers. Some examples of legal names are
-            Number_hits, temp99, and _name.
-          </p>
-        </section>
-      </div>
-        <section class="main-section" id="insert_header_name">
-          <header>Variables</header>
-          <p>
-            You use variables as symbolic names for values in your application.
-            The names of variables, called identifiers, conform to certain
-            rules.
-          </p>
-          <p>
-            A JavaScript identifier must start with a letter, underscore (_), or
-            dollar sign ($); subsequent characters can also be digits (0-9).
-            Because JavaScript is case sensitive, letters include the characters
-            "A" through "Z" (uppercase) and the characters "a" through "z"
-            (lowercase).
-          </p>
-          <p>
-            You can use ISO 8859-1 or Unicode letters such as å and ü in
-            identifiers. You can also use the Unicode escape sequences as
-            characters in identifiers. Some examples of legal names are
-            Number_hits, temp99, and _name.
-          </p>
-        </section>
-      </div>
-        <section class="main-section" id="insert_header_name">
-          <header>Variables</header>
-          <p>
-            You use variables as symbolic names for values in your application.
-            The names of variables, called identifiers, conform to certain
-            rules.
-          </p>
-          <p>
-            A JavaScript identifier must start with a letter, underscore (_), or
-            dollar sign ($); subsequent characters can also be digits (0-9).
-            Because JavaScript is case sensitive, letters include the characters
-            "A" through "Z" (uppercase) and the characters "a" through "z"
-            (lowercase).
-          </p>
-          <p>
-            You can use ISO 8859-1 or Unicode letters such as å and ü in
-            identifiers. You can also use the Unicode escape sequences as
-            characters in identifiers. Some examples of legal names are
-            Number_hits, temp99, and _name.
-          </p>
-        </section>
-      </div>
-        <section class="main-section" id="insert_header_name">
-          <header>Variables</header>
-          <p>
-            You use variables as symbolic names for values in your application.
-            The names of variables, called identifiers, conform to certain
-            rules.
-          </p>
-          <p>
-            A JavaScript identifier must start with a letter, underscore (_), or
-            dollar sign ($); subsequent characters can also be digits (0-9).
-            Because JavaScript is case sensitive, letters include the characters
-            "A" through "Z" (uppercase) and the characters "a" through "z"
-            (lowercase).
-          </p>
-          <p>
-            You can use ISO 8859-1 or Unicode letters such as å and ü in
-            identifiers. You can also use the Unicode escape sequences as
-            characters in identifiers. Some examples of legal names are
-            Number_hits, temp99, and _name.
-          </p>
+          <header><h2>Reference</h2></header>
+          <li>
+            All the documentation in this page is taken from<a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+              target="_blank"
+            >
+              MDN</a
+            >
+          </li>
         </section>
       </div>
 
-      <nav style="background-color: darkgoldenrod" id="navbar">
+      <nav id="navbar">
         <!--be on left side and always visible on desktop-->
-        <header>Must be above all in navbar</header>
-        <a href="#navigate_to_respective_section" class="nav-link"
-          >Introduction</a
-        ><br />
-        <hr />
-        <a href="#navigate_to_respective_section" class="nav-link"
-          >What you should already know</a
-        ><br />
-        <hr />
-        <a href="#navigate_to_respective_section" class="nav-link"
-          >JavaScript and Java</a
-        ><br />
-        <hr />
-        <a href="#navigate_to_respective_section" class="nav-link"
-          >Hello world </a
-        ><br />
-        <hr />
-        <a href="#navigate_to_respective_section" class="nav-link">Variables</a>
-        <br />
-        <hr />
-        <a href="#navigate_to_respective_section" class="nav-link"
-          >Declaring variables</a
-        >
-        <br />
-        <hr />
-        <a href="#navigate_to_respective_section" class="nav-link"
-          >Variable scope</a
-        >
-        <br />
-        <hr />
-        <a href="#navigate_to_respective_section" class="nav-link"
-          >Global variables</a
-        >
-        <br />
-        <hr />
-        <a href="#navigate_to_respective_section" class="nav-link">Constants</a>
-        <br />
-        <hr />
-        <a href="#navigate_to_respective_section" class="nav-link"
-          >Data types</a
-        >
-        <br />
-        <hr />
-        <a href="#navigate_to_respective_section" class="nav-link"
-          >if...else statement</a
-        >
-        <br />
-        <hr />
-        <a href="#navigate_to_respective_section" class="nav-link"
-          >while statement</a
-        >
-        <br />
-        <hr />
-        <a href="#navigate_to_respective_section" class="nav-link"
-          >Function declarations</a
-        >
-        <br />
-        <hr />
-        <a href="#navigate_to_respective_section" class="nav-link">Reference</a>
-        <br />
-        <hr />
+
+        <ul>
+          <li>
+            <header><h2>JS Documentation</h2></header>
+          </li>
+          <hr />
+          <li>
+            <a href="#navigate_to_respective_section" class="nav-link"
+              >Introduction</a
+            >
+          </li>
+          <hr />
+          <li>
+            <a href="#navigate_to_respective_section" class="nav-link"
+              >What you should already know</a
+            >
+          </li>
+          <hr />
+          <li>
+            <a href="#navigate_to_respective_section" class="nav-link"
+              >JavaScript and Java</a
+            >
+          </li>
+          <hr />
+          <li>
+            <a href="#navigate_to_respective_section" class="nav-link"
+              >JavaScript and Java</a
+            >
+          </li>
+          <hr />
+          <li>
+            <a href="#navigate_to_respective_section" class="nav-link"
+              >Hello world
+            </a>
+          </li>
+          <hr />
+          <li>
+            <a href="#navigate_to_respective_section" class="nav-link"
+              >Variables</a
+            >
+          </li>
+          <hr />
+          <li>
+            <a href="#navigate_to_respective_section" class="nav-link"
+              >Declaring variables</a
+            >
+          </li>
+          <hr />
+          <li>
+            <a href="#navigate_to_respective_section" class="nav-link"
+              >Reference</a
+            >
+          </li>
+          <hr />
+          <li>
+            <a href="#navigate_to_respective_section" class="nav-link"
+              >Reference</a
+            >
+          </li>
+          <hr />
+        </ul>
       </nav>
 
       <!--atleast one media query-->
