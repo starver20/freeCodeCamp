@@ -14,8 +14,9 @@
       display: grid;
       grid-template-columns: 250px 1fr;
     }
-    #content {
+    main section {
       padding-left: 20px;
+      margin-left: 60px;
     }
     #navbar {
       grid-area: 1/1/8/2;
@@ -33,43 +34,85 @@
     #navbar li {
       padding-left: 20px;
     }
+    h2 {
+      font-family: monospace;
+      font-size: 23px;
+      font-weight: 100;
+    }
+    p {
+      font-family: sans-serif;
+      color: rgb(54, 61, 61);
+    }
+    section header {
+      margin-left: -20px;
+    }
+    section li {
+      font-family: sans-serif;
+      font-weight: 100;
+      color: rgb(54, 61, 61);
+    }
+    code {
+      display: block;
+      background-color: bisque;
+      padding: 15px;
+    }
+    @media (max-width: 700px) {
+      main {
+        display: flex;
+        flex-direction: column;
+        justify-content: ;
+        /* grid-template-columns: 250px 1fr; */
+      }
+      main div {
+        margin-top: 400px;
+      }
+      #navbar {
+        position: fixed;
+        width: 100%;
+      }
+      #navbar ul {
+        position: relative;
+      }
+    }
   </style>
   <body>
     <main id="main-doc">
       <div id="content">
         <section class="main-section" id="introduction">
           <header><h2>Introduction</h2></header>
-          <p>
-            JavaScript is a cross-platform, object-oriented scripting language.
-            It is a small and lightweight language. Inside a host environment
-            (for example, a web browser), JavaScript can be connected to the
-            objects of its environment to provide programmatic control over
-            them.
-          </p>
-          <p>
-            JavaScript contains a standard library of objects, such as Array,
-            Date, and Math, and a core set of language elements such as
-            operators, control structures, and statements. Core JavaScript can
-            be extended for a variety of purposes by supplementing it with
-            additional objects; for example:
-          </p>
-          <ul>
-            <li>
-              Client-side JavaScript extends the core language by supplying
-              objects to control a browser and its Document Object Model (DOM).
-              For example, client-side extensions allow an application to place
-              elements on an HTML form and respond to user events such as mouse
-              clicks, form input, and page navigation.
-            </li>
-            <li>
-              Server-side JavaScript extends the core language by supplying
-              objects relevant to running JavaScript on a server. For example,
-              server-side extensions allow an application to communicate with a
-              database, provide continuity of information from one invocation to
-              another of the application, or perform file manipulations on a
-              server.
-            </li>
-          </ul>
+          <article>
+            <p>
+              JavaScript is a cross-platform, object-oriented scripting
+              language. It is a small and lightweight language. Inside a host
+              environment (for example, a web browser), JavaScript can be
+              connected to the objects of its environment to provide
+              programmatic control over them.
+            </p>
+            <p>
+              JavaScript contains a standard library of objects, such as Array,
+              Date, and Math, and a core set of language elements such as
+              operators, control structures, and statements. Core JavaScript can
+              be extended for a variety of purposes by supplementing it with
+              additional objects; for example:
+            </p>
+            <ul>
+              <li>
+                Client-side JavaScript extends the core language by supplying
+                objects to control a browser and its Document Object Model
+                (DOM). For example, client-side extensions allow an application
+                to place elements on an HTML form and respond to user events
+                such as mouse clicks, form input, and page navigation.
+              </li>
+              <li>
+                Server-side JavaScript extends the core language by supplying
+                objects relevant to running JavaScript on a server. For example,
+                server-side extensions allow an application to communicate with
+                a database, provide continuity of information from one
+                invocation to another of the application, or perform file
+                manipulations on a server.
+              </li>
+            </ul>
+          </article>
         </section>
 
         <section class="main-section" id="What_you_should_already_know">
@@ -88,7 +131,7 @@
           </ul>
         </section>
 
-        <section class="main-section" id="insert_header_name">
+        <section class="main-section" id="JavaScript_and_Java">
           <header><h2>JavaScript and Java</h2></header>
           <p>
             JavaScript and Java are similar in some ways but fundamentally
@@ -118,7 +161,7 @@
           </p>
         </section>
 
-        <section class="main-section" id="insert_header_name">
+        <section class="main-section" id="Hello_world">
           <header><h2>Hello world</h2></header>
           <p>
             To get started with writing JavaScript, open the Scratchpad and
@@ -134,7 +177,7 @@
           </p>
         </section>
 
-        <section class="main-section" id="insert_header_name">
+        <section class="main-section" id="Variables">
           <header><h2>Variables</h2></header>
           <p>
             You use variables as symbolic names for values in your application.
@@ -156,7 +199,7 @@
           </p>
         </section>
 
-        <section class="main-section" id="insert_header_name">
+        <section class="main-section" id="Declaring_variables">
           <header><h2>Declaring variables</h2></header>
           <p>You can declare a variable in three ways:</p>
           <p>With the keyword var. For example,</p>
@@ -178,7 +221,37 @@
           </p>
         </section>
 
-        <section class="main-section" id="insert_header_name">
+        <section class="main-section" id="Variable_scope">
+          <header><h2>Variable scope</h2></header>
+          <article>
+            <p>
+              When you declare a variable outside of any function, it is called
+              a global variable, because it is available to any other code in
+              the current document. When you declare a variable within a
+              function, it is called a local variable, because it is available
+              only within that function.
+            </p>
+            <p>
+              JavaScript before ECMAScript 2015 does not have block statement
+              scope; rather, a variable declared within a block is local to the
+              function (or global scope) that the block resides within. For
+              example the following code will log 5, because the scope of x is
+              the function (or global context) within which x is declared, not
+              the block, which in this case is an if statement.
+            </p>
+            <code>if (true) { var x = 5; } console.log(x); // 5</code>
+            <p>
+              This behavior changes, when using the let declaration introduced
+              in ECMAScript 2015.
+            </p>
+            <code
+              >if (true) { let y = 5; } console.log(y); // ReferenceError: y is
+              not defined</code
+            >
+          </article>
+        </section>
+
+        <section class="main-section" id="Reference">
           <header><h2>Reference</h2></header>
           <li>
             All the documentation in this page is taken from<a
@@ -200,57 +273,42 @@
           </li>
           <hr />
           <li>
-            <a href="#navigate_to_respective_section" class="nav-link"
-              >Introduction</a
-            >
+            <a href="#introduction" class="nav-link">Introduction</a>
           </li>
           <hr />
           <li>
-            <a href="#navigate_to_respective_section" class="nav-link"
+            <a href="#What_you_should_already_know" class="nav-link"
               >What you should already know</a
             >
           </li>
           <hr />
           <li>
-            <a href="#navigate_to_respective_section" class="nav-link"
+            <a href="#JavaScript_and_Java" class="nav-link"
               >JavaScript and Java</a
             >
           </li>
           <hr />
+
           <li>
-            <a href="#navigate_to_respective_section" class="nav-link"
-              >JavaScript and Java</a
-            >
+            <a href="#Hello_world" class="nav-link">Hello world </a>
           </li>
           <hr />
           <li>
-            <a href="#navigate_to_respective_section" class="nav-link"
-              >Hello world
-            </a>
+            <a href="#Variables" class="nav-link">Variables</a>
           </li>
           <hr />
           <li>
-            <a href="#navigate_to_respective_section" class="nav-link"
-              >Variables</a
-            >
-          </li>
-          <hr />
-          <li>
-            <a href="#navigate_to_respective_section" class="nav-link"
+            <a href="#Declaring_variables" class="nav-link"
               >Declaring variables</a
             >
           </li>
           <hr />
-          <li>
-            <a href="#navigate_to_respective_section" class="nav-link"
-              >Reference</a
-            >
-          </li>
+
+          <li><a href="#Variable_scope" class="nav-link">Variable Scope</a></li>
           <hr />
+
           <li>
-            <a href="#navigate_to_respective_section" class="nav-link"
-              >Reference</a
-            >
+            <a href="#Reference" class="nav-link">Reference</a>
           </li>
           <hr />
         </ul>
@@ -259,4 +317,5 @@
       <!--atleast one media query-->
     </main>
   </body>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </html>
