@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/805be46206.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Document</title>
   </head>
   <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -12,6 +16,7 @@
     href="https://fonts.googleapis.com/css2?family=New+Tegomin&family=Yatra+One&display=swap"
     rel="stylesheet"
   />
+
   <style>
     body {
       font-family: 'Yatra One', cursive;
@@ -42,10 +47,12 @@
       flex-direction: row;
       justify-content: flex-end;
     }
-    #navbar a {
-      margin-right: 1rem;
+    a {
       text-decoration: none;
       color: black;
+    }
+    #navbar a {
+      margin-right: 1rem;
     }
 
     #navbar h2 {
@@ -66,14 +73,14 @@
       background-color: pink;
       padding: 0px 90px 0px 90px;
     }
-    #project-tile a {
+    .project-tile a {
       display: grid;
       grid-template-rows: 5fr 1fr;
       text-decoration: none;
     }
-    #project-tile {
+    .project-tile {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       margin: 20px;
       grid-gap: 60px;
       text-decoration-line: none;
@@ -98,13 +105,46 @@
       margin-top: 40px;
       margin-bottom: 60px;
       border-radius: 5px;
+      text-decoration: none;
+      color: white;
+    }
+
+    #contact {
+      display: flex;
+      flex-direction: column;
+      background-color: burlywood;
+    }
+    #profile-link {
+      display: flex;
+      justify-content: center;
+    }
+    #contact h2 {
+      margin: 0px;
+      padding: 0px;
+    }
+    #contact i {
+      margin: 0px;
+      padding: 0px;
+      width: 100%;
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    #profile-link {
+      /* margin-top: 30px;
+      margin-bottom: 20px;   */
+    }
+    #profile {
+      /* margin:4rem */
     }
   </style>
   <body>
     <section>
       <nav id="navbar">
-        <a href="#about"><h2>About</h2></a>
-        <a href="#work"><h2>Work</h2></a>
+        <a href="#welcome-section"><h2>About</h2></a>
+        <a href="#projects"><h2>Work</h2></a>
         <a href="#contact"><h2>Contact</h2></a>
       </nav>
     </section>
@@ -116,7 +156,7 @@
 
     <section id="projects">
       <h2>Projects</h2>
-      <div id="project-tile">
+      <div class="project-tile">
         <a href="https://codepen.io/starver20/pen/bGgqQOX" target="_blank"
           ><img
             src="https://lh3.googleusercontent.com/wJUoXsKB_38PSil_lYGqZd55eeVVoRtIkI0tFjkpO-O8JfRa_K7kFjK1IHKxIsHz6m7x_7B7ueDLOBzAEWNjCsgL_BtyIBSjAZ61Hy7AItNm66RHyzQoiuULP-dNdYMbuX-cVIqwetSgwzgdRZ4Fxnl1GJmn-5uWj0m5Ggpt0aUvI3Gr76Um8ioGI_G33XnqPugfspHyMchenzyonVBDw1RgoEWEhYOFgGsGb2rUTiUVVQrwgMivmdZFQdodQstBH3lL_j0pZhWDIjTeJrZmER90Fd9PxHxDIIoK1w3YGBKiAjBMo8EnpsYzHch3cPvp10ZEDICcqY0VsJ4270jnw1EN4gE3vsCDiqwI9H6_Otg7YJBA1shH8mI7VzbnfLNtTajDF60w0OGNzYo6Ktbce3QeFM6SIgT8K_VeeTlUBtlxwDMcOEId0IMPNHETPulYONOvEU2C-RXxIfT6v-sHl6uYaeIZabWRiF7Wh2bwjkABXOf2QMLysTN7tVNRU5kc8wNC3YyYaXA7-s-7UdWfP9oqpENezEGTsDdm2XFW6UybpzBHHdU6XAjlFWwYHwFcBSXjVSeuMq9-jHRpj1GF3-tHcRNgFxPNSbDN2wBy8oDEzxxn6uCA5KFCa-4WSOUdR9TgProf4kYuuAZF59FlukFi1v6GYbdBBHd4Hnx1_JLTvNCl-bgvGIE82ZGC7edZtJKmt37-2UJXXWK21UPFRsrh=w1466-h680-no?authuser=0"
@@ -154,17 +194,37 @@
         >Show all</a
       >
     </section>
+    <section id="contact">
+      <h2>Lets work together...</h2>
+      <i>How do you take your coffee?</i>
+      <span id="profile-link">
+        <span id="profile">
+          <i class="fab fa-github"></i>
+          <a href="https://github.com/starver20" target="_blank">Github</a>
+        </span>
 
-    <section>
-      <span
-        ><link id="profile-link" rel="stylesheet" href="github" />github
-        link</span
-      >
-      <p>all other links</p>
+        <span id="profile">
+          <i class="fab fa-linkedin-in"></i>
+          <a href="https://github.com/starver20" target="_blank">LinkedIn</a>
+        </span>
+
+        <span id="profile">
+          <i class="fab fa-free-code-camp"></i>
+          <a href="https://github.com/starver20" target="_blank"
+            >freeCodeCamp</a
+          >
+        </span id="profile">
+
+        <span id="profile">
+          <i class="far fa-envelope"></i>
+          <a href="mailto:amarnarute2002@gmail.com" target="_blank">Email</a>
+        </span>
+      </span>
     </section>
 
-    <p>height of welcome section = height of viewport</p>
-    <p>navbar fixed on top</p>
-    <p>One media query</p>
+    <!-- <p>height of welcome section = height of viewport</p> -->
+    <!-- <p>navbar fixed on top</p> -->
+    <!-- <p>One media query</p> -->
   </body>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </html>
