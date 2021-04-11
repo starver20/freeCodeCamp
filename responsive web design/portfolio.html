@@ -20,22 +20,36 @@
   <style>
     body {
       font-family: 'Yatra One', cursive;
+      /* overflow: hidden; */
+      position: relative;
       margin: 0px;
       padding: 0px;
+      width: 100%;
       display: flex;
       flex-direction: column;
       text-align: center;
     }
     #welcome-section {
       font-family: 'New Tegomin', serif;
-      line-height: 0ex;
-      background-color: pink;
+      line-height: 0rem;
       height: 100vh;
+      width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       background: linear-gradient(62deg, #02aab0, #00cdac);
+    }
+    @media (max-width: 500px) {
+      #welcome-section h1 {
+        font-weight: 900;
+        font-size: 2rem;
+      }
+
+      #contact h2 {
+        margin: 0px;
+        font-size: 2rem;
+      }
     }
     #navbar {
       position: fixed;
@@ -80,7 +94,7 @@
     }
     .project-tile {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       margin: 20px;
       grid-gap: 60px;
       text-decoration-line: none;
@@ -123,10 +137,11 @@
     #contact i {
       margin-bottom: 50px;
       padding: 0px;
+      font-weight: 100;
     }
-    #profile-link {
-      display: flex;
-      justify-content: center;
+    #profile-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 0.5fr));
     }
     #profile {
       padding-right: 4rem;
@@ -144,7 +159,7 @@
 
     <section id="welcome-section">
       <h1>Hey I am Amar</h1>
-      <p>a web developer</p>
+      <p id="p">a web developer</p>
     </section>
 
     <section id="projects">
@@ -191,27 +206,45 @@
     <section id="contact">
       <h2>Lets work together...</h2>
       <i>How do you take your coffee?</i>
-      <span id="profile-link">
+      <span id="profile-links">
         <span id="profile">
           <i class="fab fa-github"></i>
-          <a href="https://github.com/starver20" target="_blank">Github</a>
+          <a
+            href="https://github.com/starver20"
+            target="_blank"
+            id="profile-link"
+            >Github</a
+          >
         </span>
 
         <span id="profile">
           <i class="fab fa-linkedin-in"></i>
-          <a href="https://github.com/starver20" target="_blank">LinkedIn</a>
+          <a
+            href="https://github.com/starver20"
+            target="_blank"
+            id="profile-link"
+            >LinkedIn</a
+          >
         </span>
 
         <span id="profile">
           <i class="fab fa-free-code-camp"></i>
-          <a href="https://github.com/starver20" target="_blank"
+          <a
+            href="https://github.com/starver20"
+            target="_blank"
+            id="profile-link"
             >freeCodeCamp</a
           >
         </span>
 
         <span id="profile">
           <i class="far fa-envelope"></i>
-          <a href="mailto:amarnarute2002@gmail.com" target="_blank">Email</a>
+          <a
+            href="mailto:amarnarute2002@gmail.com"
+            target="_blank"
+            id="profile-link"
+            >Email</a
+          >
         </span>
       </span>
     </section>
